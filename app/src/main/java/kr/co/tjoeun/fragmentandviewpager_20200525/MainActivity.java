@@ -31,5 +31,7 @@ public class MainActivity extends BaseActivity {
     public void setValues() {
         mvpa = new MyViewPagerAdapter(getSupportFragmentManager());
         binding.myViewPager.setAdapter(mvpa);
+
+        binding.myTabLayout.setupWithViewPager(binding.myViewPager);
     }
 }

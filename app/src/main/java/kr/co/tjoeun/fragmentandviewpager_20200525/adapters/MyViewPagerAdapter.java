@@ -1,6 +1,7 @@
 package kr.co.tjoeun.fragmentandviewpager_20200525.adapters;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -13,6 +14,20 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
 
     public MyViewPagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if(position == 0) {
+            return "첫 페이지";
+        }
+        else if(position ==1) {
+            return "두번째";
+        }
+        else {
+            return "세번째";
+        }
     }
 
     @NonNull
